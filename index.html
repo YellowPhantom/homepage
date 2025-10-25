@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Homepage</title>
+	<link rel="icon" type="image/x-icon" href="https://easydrawingguides.com/wp-content/uploads/2020/08/how-to-draw-a-ps4-controller-featured-image-1200.png">
+	<link rel="stylesheet" href="style.css">	
+</head>
+<body>
+	<h1>Welcome to my Homepage!</h1>
+    <marquee scrollamount="50">Hello</marquee>
+    <img src="https://no-cdn.shortpixel.ai/client/to_avif,q_lossy,ret_wait/https://shortpixel.com/blog/wp-content/uploads/2023/12/nyan-cat.gif" id="nyanCat" alt="Nyan Cat">
+    <audio src="https://codehs.com/uploads/0940f38d1297323af7f33c0bb92a1db3" id="helloAudio"></audio>
+    <br><br><br>
+
+    <a href="about-me.html" class="button">
+      <div>
+        <div>
+          <div>About Me</div>
+        </div>
+      </div>
+    </a>
+    <br><br><br><br>
+    <a href="gam.html" class="button2">
+      <div>
+        <div>
+          <div>Favourite Games</div>
+        </div>
+      </div>
+    </a>
+    
+    <script>
+        document.getElementById("nyanCat").addEventListener("click", function() {
+          try {
+            document.getElementById("helloAudio").play();
+            setTimeout(function() {
+              alert("Hello");
+            }, 250);
+          } catch (error) {
+            console.error("Error playing audio or displaying alert:", error);
+          }
+        });
+  </script>
+</body>
+</html>
