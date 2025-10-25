@@ -1,0 +1,934 @@
+body {
+    font-family: Georgia, serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    color: #333;
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    color: #555;
+    margin-top: 20px;
+}
+
+p {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+img {
+    width: 300px;
+     border-radius: 5px;
+    margin-top: 10px;
+}
+
+ol {
+    list-style-type: decimal;
+    text-align: left;
+    display: inline-block;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ol li {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+}
+
+ul {
+    text-align: left;
+    display: inline-block;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ul li {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+}
+
+a {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: rgba(85,26,139,255);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* From Uiverse.io by augustin_4687 */ 
+.button {
+  --stone-50: #fafaf9;
+  --stone-800: #292524;
+  --yellow-400: #facc15;
+
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 1rem;
+  border-radius: 1rem;
+  outline: 2px solid transparent;
+  outline-offset: 6px;
+  color: var(--stone-50);
+
+  &:active {
+    outline-color: var(--yellow-400);
+  }
+
+  &:focus-visible {
+    outline-color: var(--yellow-400);
+    outline-style: dashed;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    height: 200%;
+    max-height: 100px;
+    aspect-ratio: 1;
+    margin: auto;
+    background: black;
+    clip-path: polygon(
+      100% 50%,
+      91.48% 56.57%,
+      97.55% 65.45%,
+      87.42% 69.07%,
+      90.45% 79.39%,
+      79.7% 79.7%,
+      79.39% 90.45%,
+      69.07% 87.42%,
+      65.45% 97.55%,
+      56.57% 91.48%,
+      50% 100%,
+      43.43% 91.48%,
+      34.55% 97.55%,
+      30.93% 87.42%,
+      20.61% 90.45%,
+      20.3% 79.7%,
+      9.55% 79.39%,
+      12.58% 69.07%,
+      2.45% 65.45%,
+      8.52% 56.57%,
+      0% 50%,
+      8.52% 43.43%,
+      2.45% 34.55%,
+      12.58% 30.93%,
+      9.55% 20.61%,
+      20.3% 20.3%,
+      20.61% 9.55%,
+      30.93% 12.58%,
+      34.55% 2.45%,
+      43.43% 8.52%,
+      50% 0%,
+      56.57% 8.52%,
+      65.45% 2.45%,
+      69.07% 12.58%,
+      79.39% 9.55%,
+      79.7% 20.3%,
+      90.45% 20.61%,
+      87.42% 30.93%,
+      97.55% 34.55%,
+      91.48% 43.43%
+    );
+
+    animation: star-rotate 4s linear infinite;
+    opacity: 0.5;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  & > div {
+    padding: 2px;
+    border-radius: 1rem;
+    background-color: var(--yellow-400);
+    transform: translate(-4px, -4px);
+    transition: all 150ms ease;
+    box-shadow:
+      0.5px 0.5px 0 0 var(--yellow-400),
+      1px 1px 0 0 var(--yellow-400),
+      1.5px 1.5px 0 0 var(--yellow-400),
+      2px 2px 0 0 var(--yellow-400),
+      2.5px 2.5px 0 0 var(--yellow-400),
+      3px 3px 0 0 var(--yellow-400),
+      0 0 0 2px var(--stone-800),
+      0.5px 0.5px 0 2px var(--stone-800),
+      1px 1px 0 2px var(--stone-800),
+      1.5px 1.5px 0 2px var(--stone-800),
+      2px 2px 0 2px var(--stone-800),
+      2.5px 2.5px 0 2px var(--stone-800),
+      3px 3px 0 2px var(--stone-800),
+      3.5px 3.5px 0 2px var(--stone-800),
+      4px 4px 0 2px var(--stone-800),
+      0 0 0 4px var(--stone-50),
+      0.5px 0.5px 0 4px var(--stone-50),
+      1px 1px 0 4px var(--stone-50),
+      1.5px 1.5px 0 4px var(--stone-50),
+      2px 2px 0 4px var(--stone-50),
+      2.5px 2.5px 0 4px var(--stone-50),
+      3px 3px 0 4px var(--stone-50),
+      3.5px 3.5px 0 4px var(--stone-50),
+      4px 4px 0 4px var(--stone-50);
+
+    .button:hover & {
+      transform: translate(0, 0);
+      box-shadow:
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50);
+    }
+
+    & > div {
+      position: relative;
+      pointer-events: none;
+      border-radius: calc(1rem - 2px);
+      background-color: var(--stone-800);
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 1rem;
+        opacity: 0.1;
+        background-image: radial-gradient(
+            rgb(255 255 255 / 80%) 20%,
+            transparent 20%
+          ),
+          radial-gradient(rgb(255 255 255 / 100%) 20%, transparent 20%);
+        background-position:
+          0 0,
+          4px 4px;
+        background-size: 8px 8px;
+        mix-blend-mode: hard-light;
+        box-shadow: inset 0 0 0 1px var(--stone-800);
+        animation: dots 0.4s infinite linear;
+        transition: opacity 150ms ease;
+      }
+
+      & > div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1.25rem;
+        gap: 0.25rem;
+        filter: drop-shadow(0 -1px 0 var(--stone-800));
+
+        &:hover {
+          filter: drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.1));
+        }
+
+        &:active {
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+}
+
+@keyframes star-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dots {
+  0% {
+    background-position:
+      0 0,
+      4px 4px;
+  }
+  100% {
+    background-position:
+      8px 0,
+      12px 4px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .button {
+    &:active,
+    &:focus-visible {
+      outline-color: var(--yellow-400);
+    }
+  }
+}
+
+.button3 {
+  --stone-50: #fafaf9;
+  --stone-800: #292524;
+  --yellow-400: #7a7047;
+
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 1rem;
+  border-radius: 1rem;
+  outline: 2px solid transparent;
+  outline-offset: 6px;
+  color: var(--stone-50);
+
+  &:active {
+    outline-color: var(--yellow-400);
+  }
+
+  &:focus-visible {
+    outline-color: var(--yellow-400);
+    outline-style: dashed;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    height: 200%;
+    max-height: 100px;
+    aspect-ratio: 1;
+    margin: auto;
+    background: black;
+    clip-path: polygon(
+      100% 50%,
+      91.48% 56.57%,
+      97.55% 65.45%,
+      87.42% 69.07%,
+      90.45% 79.39%,
+      79.7% 79.7%,
+      79.39% 90.45%,
+      69.07% 87.42%,
+      65.45% 97.55%,
+      56.57% 91.48%,
+      50% 100%,
+      43.43% 91.48%,
+      34.55% 97.55%,
+      30.93% 87.42%,
+      20.61% 90.45%,
+      20.3% 79.7%,
+      9.55% 79.39%,
+      12.58% 69.07%,
+      2.45% 65.45%,
+      8.52% 56.57%,
+      0% 50%,
+      8.52% 43.43%,
+      2.45% 34.55%,
+      12.58% 30.93%,
+      9.55% 20.61%,
+      20.3% 20.3%,
+      20.61% 9.55%,
+      30.93% 12.58%,
+      34.55% 2.45%,
+      43.43% 8.52%,
+      50% 0%,
+      56.57% 8.52%,
+      65.45% 2.45%,
+      69.07% 12.58%,
+      79.39% 9.55%,
+      79.7% 20.3%,
+      90.45% 20.61%,
+      87.42% 30.93%,
+      97.55% 34.55%,
+      91.48% 43.43%
+    );
+
+    animation: star-rotate 4s linear infinite;
+    opacity: 0.5;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  & > div {
+    padding: 2px;
+    border-radius: 1rem;
+    background-color: var(--yellow-400);
+    transform: translate(-4px, -4px);
+    transition: all 150ms ease;
+    box-shadow:
+      0.5px 0.5px 0 0 var(--yellow-400),
+      1px 1px 0 0 var(--yellow-400),
+      1.5px 1.5px 0 0 var(--yellow-400),
+      2px 2px 0 0 var(--yellow-400),
+      2.5px 2.5px 0 0 var(--yellow-400),
+      3px 3px 0 0 var(--yellow-400),
+      0 0 0 2px var(--stone-800),
+      0.5px 0.5px 0 2px var(--stone-800),
+      1px 1px 0 2px var(--stone-800),
+      1.5px 1.5px 0 2px var(--stone-800),
+      2px 2px 0 2px var(--stone-800),
+      2.5px 2.5px 0 2px var(--stone-800),
+      3px 3px 0 2px var(--stone-800),
+      3.5px 3.5px 0 2px var(--stone-800),
+      4px 4px 0 2px var(--stone-800),
+      0 0 0 4px var(--stone-50),
+      0.5px 0.5px 0 4px var(--stone-50),
+      1px 1px 0 4px var(--stone-50),
+      1.5px 1.5px 0 4px var(--stone-50),
+      2px 2px 0 4px var(--stone-50),
+      2.5px 2.5px 0 4px var(--stone-50),
+      3px 3px 0 4px var(--stone-50),
+      3.5px 3.5px 0 4px var(--stone-50),
+      4px 4px 0 4px var(--stone-50);
+
+    .button:hover & {
+      transform: translate(0, 0);
+      box-shadow:
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50);
+    }
+
+    & > div {
+      position: relative;
+      pointer-events: none;
+      border-radius: calc(1rem - 2px);
+      background-color: var(--stone-800);
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 1rem;
+        opacity: 0.1;
+        background-image: radial-gradient(
+            rgb(255 255 255 / 80%) 20%,
+            transparent 20%
+          ),
+          radial-gradient(rgb(255 255 255 / 100%) 20%, transparent 20%);
+        background-position:
+          0 0,
+          4px 4px;
+        background-size: 8px 8px;
+        mix-blend-mode: hard-light;
+        box-shadow: inset 0 0 0 1px var(--stone-800);
+        animation: dots 0.4s infinite linear;
+        transition: opacity 150ms ease;
+      }
+
+      & > div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1.25rem;
+        gap: 0.25rem;
+        filter: drop-shadow(0 -1px 0 var(--stone-800));
+
+        &:hover {
+          filter: drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.1));
+        }
+
+        &:active {
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+}
+
+@keyframes star-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dots {
+  0% {
+    background-position:
+      0 0,
+      4px 4px;
+  }
+  100% {
+    background-position:
+      8px 0,
+      12px 4px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .button {
+    &:active,
+    &:focus-visible {
+      outline-color: var(--yellow-400);
+    }
+  }
+}
+
+.button2 {
+  --stone-50: #fafaf9;
+  --stone-800: #292524;
+  --yellow-400: #4449a5;
+
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 1rem;
+  border-radius: 1rem;
+  outline: 2px solid transparent;
+  outline-offset: 6px;
+  color: var(--stone-50);
+
+  &:active {
+    outline-color: var(--yellow-400);
+  }
+
+  &:focus-visible {
+    outline-color: var(--yellow-400);
+    outline-style: dashed;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    height: 200%;
+    max-height: 100px;
+    aspect-ratio: 1;
+    margin: auto;
+    background: black;
+    clip-path: polygon(
+      100% 50%,
+      91.48% 56.57%,
+      97.55% 65.45%,
+      87.42% 69.07%,
+      90.45% 79.39%,
+      79.7% 79.7%,
+      79.39% 90.45%,
+      69.07% 87.42%,
+      65.45% 97.55%,
+      56.57% 91.48%,
+      50% 100%,
+      43.43% 91.48%,
+      34.55% 97.55%,
+      30.93% 87.42%,
+      20.61% 90.45%,
+      20.3% 79.7%,
+      9.55% 79.39%,
+      12.58% 69.07%,
+      2.45% 65.45%,
+      8.52% 56.57%,
+      0% 50%,
+      8.52% 43.43%,
+      2.45% 34.55%,
+      12.58% 30.93%,
+      9.55% 20.61%,
+      20.3% 20.3%,
+      20.61% 9.55%,
+      30.93% 12.58%,
+      34.55% 2.45%,
+      43.43% 8.52%,
+      50% 0%,
+      56.57% 8.52%,
+      65.45% 2.45%,
+      69.07% 12.58%,
+      79.39% 9.55%,
+      79.7% 20.3%,
+      90.45% 20.61%,
+      87.42% 30.93%,
+      97.55% 34.55%,
+      91.48% 43.43%
+    );
+
+    animation: star-rotate 4s linear infinite;
+    opacity: 0.5;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  & > div {
+    padding: 2px;
+    border-radius: 1rem;
+    background-color: var(--yellow-400);
+    transform: translate(-4px, -4px);
+    transition: all 150ms ease;
+    box-shadow:
+      0.5px 0.5px 0 0 var(--yellow-400),
+      1px 1px 0 0 var(--yellow-400),
+      1.5px 1.5px 0 0 var(--yellow-400),
+      2px 2px 0 0 var(--yellow-400),
+      2.5px 2.5px 0 0 var(--yellow-400),
+      3px 3px 0 0 var(--yellow-400),
+      0 0 0 2px var(--stone-800),
+      0.5px 0.5px 0 2px var(--stone-800),
+      1px 1px 0 2px var(--stone-800),
+      1.5px 1.5px 0 2px var(--stone-800),
+      2px 2px 0 2px var(--stone-800),
+      2.5px 2.5px 0 2px var(--stone-800),
+      3px 3px 0 2px var(--stone-800),
+      3.5px 3.5px 0 2px var(--stone-800),
+      4px 4px 0 2px var(--stone-800),
+      0 0 0 4px var(--stone-50),
+      0.5px 0.5px 0 4px var(--stone-50),
+      1px 1px 0 4px var(--stone-50),
+      1.5px 1.5px 0 4px var(--stone-50),
+      2px 2px 0 4px var(--stone-50),
+      2.5px 2.5px 0 4px var(--stone-50),
+      3px 3px 0 4px var(--stone-50),
+      3.5px 3.5px 0 4px var(--stone-50),
+      4px 4px 0 4px var(--stone-50);
+
+    .button:hover & {
+      transform: translate(0, 0);
+      box-shadow:
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50);
+    }
+
+    & > div {
+      position: relative;
+      pointer-events: none;
+      border-radius: calc(1rem - 2px);
+      background-color: var(--stone-800);
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 1rem;
+        opacity: 0.1;
+        background-image: radial-gradient(
+            rgb(255 255 255 / 80%) 20%,
+            transparent 20%
+          ),
+          radial-gradient(rgb(255 255 255 / 100%) 20%, transparent 20%);
+        background-position:
+          0 0,
+          4px 4px;
+        background-size: 8px 8px;
+        mix-blend-mode: hard-light;
+        box-shadow: inset 0 0 0 1px var(--stone-800);
+        animation: dots 0.4s infinite linear;
+        transition: opacity 150ms ease;
+      }
+
+      & > div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1.25rem;
+        gap: 0.25rem;
+        filter: drop-shadow(0 -1px 0 var(--stone-800));
+
+        &:hover {
+          filter: drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.1));
+        }
+
+        &:active {
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+}
+
+@keyframes star-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dots {
+  0% {
+    background-position:
+      0 0,
+      4px 4px;
+  }
+  100% {
+    background-position:
+      8px 0,
+      12px 4px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .button {
+    &:active,
+    &:focus-visible {
+      outline-color: var(--yellow-400);
+    }
+  }
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  backdrop-filter: blur(1em) brightness(6);
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    #0000 0,
+    #0000 2px,
+    hsl(0 0 4%) 2px
+  );
+  background-size: 8px 8px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  --c: #09f;
+  background-color: #000;
+  background-image: radial-gradient(4px 100px at 0px 235px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 235px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 117.5px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 252px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 252px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 126px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 150px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 150px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 75px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 253px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 253px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 126.5px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 204px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 204px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 102px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 134px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 134px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 67px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 179px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 179px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 89.5px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 299px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 299px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 149.5px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 215px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 215px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 107.5px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 281px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 281px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 140.5px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 158px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 158px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 79px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 210px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 210px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 105px, var(--c) 100%, #0000 150%);
+  background-size:
+    300px 235px,
+    300px 235px,
+    300px 235px,
+    300px 252px,
+    300px 252px,
+    300px 252px,
+    300px 150px,
+    300px 150px,
+    300px 150px,
+    300px 253px,
+    300px 253px,
+    300px 253px,
+    300px 204px,
+    300px 204px,
+    300px 204px,
+    300px 134px,
+    300px 134px,
+    300px 134px,
+    300px 179px,
+    300px 179px,
+    300px 179px,
+    300px 299px,
+    300px 299px,
+    300px 299px,
+    300px 215px,
+    300px 215px,
+    300px 215px,
+    300px 281px,
+    300px 281px,
+    300px 281px,
+    300px 158px,
+    300px 158px,
+    300px 158px,
+    300px 210px,
+    300px 210px,
+    300px 210px;
+  animation: hi 150s linear infinite;
+}
+
+@keyframes hi {
+  0% {
+    background-position:
+      0px 220px,
+      3px 220px,
+      151.5px 337.5px,
+      25px 24px,
+      28px 24px,
+      176.5px 150px,
+      50px 16px,
+      53px 16px,
+      201.5px 91px,
+      75px 224px,
+      78px 224px,
+      226.5px 350.5px,
+      100px 19px,
+      103px 19px,
+      251.5px 121px,
+      125px 120px,
+      128px 120px,
+      276.5px 187px,
+      150px 31px,
+      153px 31px,
+      301.5px 120.5px,
+      175px 235px,
+      178px 235px,
+      326.5px 384.5px,
+      200px 121px,
+      203px 121px,
+      351.5px 228.5px,
+      225px 224px,
+      228px 224px,
+      376.5px 364.5px,
+      250px 26px,
+      253px 26px,
+      401.5px 105px,
+      275px 75px,
+      278px 75px,
+      426.5px 180px;
+  }
+
+  to {
+    background-position:
+      0px 6800px,
+      3px 6800px,
+      151.5px 6917.5px,
+      25px 13632px,
+      28px 13632px,
+      176.5px 13758px,
+      50px 5416px,
+      53px 5416px,
+      201.5px 5491px,
+      75px 17175px,
+      78px 17175px,
+      226.5px 17301.5px,
+      100px 5119px,
+      103px 5119px,
+      251.5px 5221px,
+      125px 8428px,
+      128px 8428px,
+      276.5px 8495px,
+      150px 9876px,
+      153px 9876px,
+      301.5px 9965.5px,
+      175px 13391px,
+      178px 13391px,
+      326.5px 13540.5px,
+      200px 14741px,
+      203px 14741px,
+      351.5px 14848.5px,
+      225px 18770px,
+      228px 18770px,
+      376.5px 18910.5px,
+      250px 5082px,
+      253px 5082px,
+      401.5px 5161px,
+      275px 6375px,
+      278px 6375px,
+      426.5px 6480px;
+  }
+}
