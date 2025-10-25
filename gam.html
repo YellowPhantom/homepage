@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <title>My Favorite Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>My Favorite Games</h1>
+    <ol>
+        <li>
+            <h2>Roblox</h2>
+            <p>An online game platform and game creation system built around user-generated content and games</p>
+            <img src="https://codehs.com/uploads/6d9a3b026fb25f0c65a8c1868687a35e" alt="Roblox">
+        </li>
+        <li>
+            <h2><a href="brawltars.html">Brawl Stars</a></h2>
+            <p>A fast-paced multiplayer battle arena game developed by Supercell.</p>            
+            <img src="https://codehs.com/uploads/d9437638195fd7b27fcaf5ea775805a7" id="edgar" alt="Brawl Stars">
+            <audio src="https://codehs.com/uploads/f1b243c1a064ef3ed1a994b858db51f7" id="edgaraudio"></audio>
+        </li>
+        <li>
+            <h2>R.E.P.O</h2>
+            <p>A multiplayer horror game that u can goof around with</p>
+            <img src="https://media1.tenor.com/m/7LlG28mFtboAAAAd/average-repo-session-repo.gif" alt="R.E.P.O">
+        </li>        
+        <li>
+            <h2>Split Fiction</h2>
+            <p>A very good 2 player game</p>
+            <img src="https://imgix.bustle.com/uploads/image/2025/3/3/364916af/split-fiction-review.gif" alt="Split Fiction">
+        </li>
+    </ol>
+    <br><br>
+    <a href="index.html" class="button3">
+      <div>
+        <div>
+          <div>Back Home</div>
+        </div>
+      </div>
+    </a>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const image = document.getElementById("edgar");
+        const audio = document.getElementById("edgaraudio");
+
+        if (image && audio) {
+          image.addEventListener("click", function() {
+            try {
+              audio.play();
+            } catch (error) {
+              console.error("Error playing audio:", error);
+            }
+          });
+        } else {
+          console.error("Either image or audio element not found.");
+        }
+      });
+    </script>
+</body>
+</html>
